@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+}
+
+main {
+    background-color: $black;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    font-family: $font-antonio;
+    font-weight: $antonio-medium;
+    font-size: 8rem;
+    line-height: 10.3rem;
+    color: $white;
+}
+
+h2 {
+    font-family: $font-antonio;
+    font-weight: $antonio-medium;
+    font-size: 4rem;
+    line-height: 5.2rem;
+    letter-spacing: -0.15rem;
+    color: $white;
+}
+
+h3 {
+    font-family: $font-spartan;
+    font-weight: $spartan-bold;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.26rem;
+    color: $white;
+}
+
+h4 {
+    font-family: $font-spartan;
+    font-weight: $spartan-bold;
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.1rem;
+    color: $white;
+}
+
+p {
+    font-family: $font-spartan;
+    font-weight: $spartan-regular;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    color: $white;
+}

@@ -1,0 +1,102 @@
+.button {
+  text-transform: uppercase;
+  letter-spacing: 0.257rem;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  width: 35rem;
+  height: 4.8rem;
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #38384f;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.button span {
+  color: #838391;
+  font-size: 1.2rem;
+  padding-inline: 2.8rem;
+  letter-spacing: 0.257rem;
+  line-height: 2.5rem;
+}
+.button p {
+  font-size: 1.2rem;
+}
+.button:hover {
+  background-color: #38384f;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.button .active {
+  background-color: #419ebb;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+}
+
+main {
+  background-color: #070724;
+  height: 100vh;
+  width: 100vw;
+}
+
+h1 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 500;
+  font-size: 8rem;
+  line-height: 10.3rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 5.2rem;
+  letter-spacing: -0.15rem;
+  color: #ffffff;
+}
+
+h3 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.26rem;
+  color: #ffffff;
+}
+
+h4 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+  color: #ffffff;
+}
+
+p {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: #ffffff;
+}
