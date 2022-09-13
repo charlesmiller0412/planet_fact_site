@@ -4,25 +4,6 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <meta charSet="utf-8" />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
-                <meta name="author" content="Charles Miller" />
-                <meta
-                    name="description"
-                    content="Charles Miller | Planet Fact Site"
-                />
-                <meta property="og:image" content="/assets/favicon/logo.png" />
-                <meta
-                    property="og:description"
-                    content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer"
-                />
-                <meta
-                    property="og:title"
-                    content="Charles Miller | Web Developer, UX/UI Designer, &amp; Graphic Designer"
-                />
                 {/* google font */}
                 <link
                     href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;700&family=League+Spartan:wght@400;700&display=swap"
