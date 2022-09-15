@@ -47,3 +47,13 @@
         -o-transition: all 0.2s;
     }
 }
+
+.navbar {
+    display: fixed;
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    height: 8.5rem;
+    background-color: transparent;
+}

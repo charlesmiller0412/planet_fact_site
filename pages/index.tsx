@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Button from "../components/button";
+import starBG from "../assets/images/background-stars.svg";
+import Navbar from "../components/navbar";
+import Mercury from "../pages/sections/Mercury";
 
 const Home: NextPage = () => {
     return (
@@ -28,10 +30,20 @@ const Home: NextPage = () => {
                 />
                 <title>Charles Miller | Planet Fact Site</title>
             </Head>
-
-            <main>
-                <h1>Hello</h1>
-                <Button />
+            <header>
+                <Navbar />
+            </header>
+            <main
+                style={{
+                    backgroundImage: `url(${starBG.src})`,
+                    width: "100vw",
+                    height: "100vh",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "none",
+                    backgroundSize: "cover",
+                }}
+            >
+                <Mercury />
             </main>
 
             <footer></footer>

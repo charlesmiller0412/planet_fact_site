@@ -46,16 +46,29 @@
   -o-transition: all 0.2s;
 }
 
+.navbar {
+  display: fixed;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  height: 8.5rem;
+  background-color: transparent;
+}
+
 * {
   padding: 0;
   margin: 0;
   font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 main {
   background-color: #070724;
   height: 100vh;
   width: 100vw;
+  display: grid;
+  place-items: center;
 }
 
 h1 {
@@ -99,4 +112,47 @@ p {
   font-size: 1.4rem;
   line-height: 2.5rem;
   color: #ffffff;
+}
+
+.mercury {
+  color: red;
+  height: 54.1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3.2rem;
+  border-bottom: 1px solid #38384f;
+}
+.navbar__title {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+  font-family: "Antonio", sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.105rem;
+}
+.navbar__links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  height: 100%;
+}
+.navbar__links a {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+}
+.navbar__links a:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-top: 0.4rem solid #419ebb;
 }
