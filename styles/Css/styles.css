@@ -69,6 +69,8 @@ main {
   width: 100vw;
   display: grid;
   place-items: center;
+  padding-left: 16.5rem;
+  padding-right: 16.5rem;
 }
 
 h1 {
@@ -115,8 +117,75 @@ p {
 }
 
 .mercury {
-  color: red;
-  height: 54.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding-top: 9rem;
+}
+.mercury__top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mercury__top--image {
+  width: 50%;
+  text-align: center;
+}
+.mercury__top--info {
+  max-width: 35rem;
+}
+.mercury__top--info-title {
+  text-transform: uppercase;
+}
+.mercury__top--info-text {
+  margin: 2rem 0;
+}
+.mercury__top--info-text p {
+  margin-bottom: 2.4rem;
+}
+.mercury__top--info-text span {
+  position: relative;
+}
+.mercury__top--info-text span,
+.mercury__top--info-text span a {
+  text-align: end;
+  color: #838391;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+}
+.mercury__top--info-text span a .arrow,
+.mercury__top--info-text span a a .arrow {
+  position: absolute;
+  bottom: -1.1rem;
+  right: -2rem;
+  margin-left: 1rem;
+}
+.mercury__top--info-buttons Button:nth-child(2) {
+  margin: 1.6rem 0;
+}
+.mercury__bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mercury__bottom--rotation, .mercury__bottom--revolution, .mercury__bottom--radius, .mercury__bottom--average {
+  border: 1px solid #38384f;
+  padding: 2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 17vw;
+  max-width: 25.5rem;
+}
+.mercury__bottom--rotation-title, .mercury__bottom--revolution-title, .mercury__bottom--radius-title, .mercury__bottom--average-title {
+  color: #838391;
+  margin-bottom: 0.5rem;
 }
 
 .navbar {
@@ -136,7 +205,7 @@ p {
 }
 .navbar__links {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 50%;
   height: 100%;
 }

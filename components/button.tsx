@@ -1,8 +1,12 @@
-export default function Button() {
+interface Props {
+    number?: React.ReactNode;
+    title?: React.ReactNode;
+}
+export const Button: React.FC<Props> = ({ number, title }) => {
     return (
         <button className="button">
-            <span className="buttonNumber">01</span>
-            <p>Button</p>
+            <span className="buttonNumber">{number}</span>
+            <p>{title}</p>
         </button>
     );
-}
+};
