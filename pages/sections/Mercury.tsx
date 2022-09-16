@@ -13,7 +13,7 @@ export default function Mercury() {
         getData();
     }, []);
 
-    let i = 0;
+    let i = 1;
 
     return (
         <section className="mercury">
