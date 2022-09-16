@@ -3,7 +3,10 @@ import Head from "next/head";
 import Image from "next/image";
 import starBG from "../public/assets/images/background-stars.svg";
 import Navbar from "../components/navbar";
-import Mercury from "../pages/sections/Mercury";
+import dynamic from "next/dynamic";
+const DynamicHeader = dynamic(() => import("./sections/Planets"), {
+    ssr: false,
+});
 
 const Home: NextPage = () => {
     return (
@@ -43,7 +46,7 @@ const Home: NextPage = () => {
                     backgroundSize: "cover",
                 }}
             >
-                <Mercury />
+                <DynamicHeader />
             </main>
 
             <footer></footer>

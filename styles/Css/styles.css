@@ -116,7 +116,7 @@ p {
   color: #ffffff;
 }
 
-.mercury {
+.planets {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -125,33 +125,38 @@ p {
   width: 100%;
   padding-top: 9rem;
 }
-.mercury__top {
+.planets__top {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.mercury__top--image {
-  width: 50%;
-  text-align: center;
-}
-.mercury__top--info {
-  max-width: 35rem;
-}
-.mercury__top--info-title {
-  text-transform: uppercase;
-}
-.mercury__top--info-text {
-  margin: 2rem 0;
-}
-.mercury__top--info-text p {
-  margin-bottom: 2.4rem;
-}
-.mercury__top--info-text span {
+  height: 70%;
   position: relative;
 }
-.mercury__top--info-text span,
-.mercury__top--info-text span a {
+.planets__top--image {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.planets__top--info {
+  max-width: 35rem;
+}
+.planets__top--info-title {
+  text-transform: uppercase;
+}
+.planets__top--info-text {
+  margin-top: 2rem;
+  height: 20rem;
+}
+.planets__top--info-text p {
+  margin-bottom: 2.4rem;
+}
+.planets__top--info-text span {
+  position: relative;
+}
+.planets__top--info-text span,
+.planets__top--info-text span a {
   text-align: end;
   color: #838391;
   font-family: "League Spartan", sans-serif;
@@ -159,24 +164,24 @@ p {
   font-size: 1.4rem;
   line-height: 2.5rem;
 }
-.mercury__top--info-text span a .arrow,
-.mercury__top--info-text span a a .arrow {
+.planets__top--info-text span a .arrow,
+.planets__top--info-text span a a .arrow {
   position: absolute;
   bottom: -1.1rem;
   right: -2rem;
   margin-left: 1rem;
 }
-.mercury__top--info-buttons Button:nth-child(2) {
+.planets__top--info-buttons Button:nth-child(2) {
   margin: 1.6rem 0;
 }
-.mercury__bottom {
+.planets__bottom {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   white-space: nowrap;
 }
-.mercury__bottom--rotation, .mercury__bottom--revolution, .mercury__bottom--radius, .mercury__bottom--average {
+.planets__bottom--rotation, .planets__bottom--revolution, .planets__bottom--radius, .planets__bottom--average {
   border: 1px solid #38384f;
   padding: 2rem;
   color: #ffffff;
@@ -184,9 +189,32 @@ p {
   width: 17vw;
   max-width: 25.5rem;
 }
-.mercury__bottom--rotation-title, .mercury__bottom--revolution-title, .mercury__bottom--radius-title, .mercury__bottom--average-title {
+.planets__bottom--rotation-title, .planets__bottom--revolution-title, .planets__bottom--radius-title, .planets__bottom--average-title {
   color: #838391;
   margin-bottom: 0.5rem;
+}
+
+.geologyPosition {
+  position: absolute;
+  top: 65%;
+  left: 25%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.planetImage {
+  text-align: center;
+}
+
+.active {
+  background-color: #419ebb;
+}
+
+.inactive {
+  background-color: transparent;
 }
 
 .navbar {
