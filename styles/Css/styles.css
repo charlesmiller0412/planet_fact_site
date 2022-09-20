@@ -3,6 +3,7 @@
   letter-spacing: 0.257rem;
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
+  margin-bottom: 1.6rem;
   display: flex;
   align-items: center;
   width: 35rem;
@@ -18,15 +19,15 @@
   -ms-transition: all 0.2s;
   -o-transition: all 0.2s;
 }
+.button :last-of-type {
+  margin-bottom: 0;
+}
 .button span {
   color: #838391;
   font-size: 1.2rem;
   padding-inline: 2.8rem;
   letter-spacing: 0.257rem;
   line-height: 2.5rem;
-}
-.button p {
-  font-size: 1.2rem;
 }
 .button:hover {
   background-color: #38384f;
@@ -56,6 +57,16 @@
   background-color: transparent;
 }
 
+@media screen and (max-width: 768px) {
+  .button {
+    width: 28rem;
+    height: 4rem;
+  }
+  .button:hover {
+    background-color: #419ebb;
+    cursor: pointer;
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -69,14 +80,14 @@ main {
   width: 100vw;
   display: grid;
   place-items: center;
-  padding-left: 16.5rem;
-  padding-right: 16.5rem;
+  padding-left: 10.5vw;
+  padding-right: 10.5vw;
 }
 
 h1 {
   font-family: "Antonio", sans-serif;
   font-weight: 500;
-  font-size: 8rem;
+  font-size: clamp(6rem, 6vw, 8rem);
   line-height: 10.3rem;
   color: #ffffff;
 }
@@ -84,7 +95,7 @@ h1 {
 h2 {
   font-family: "Antonio", sans-serif;
   font-weight: 500;
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 3vw, 4rem);
   line-height: 5.2rem;
   letter-spacing: -0.15rem;
   color: #ffffff;
@@ -111,11 +122,44 @@ h4 {
 p {
   font-family: "League Spartan", sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
   line-height: 2.5rem;
   color: #ffffff;
 }
 
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 4.8rem;
+    line-height: auto;
+  }
+  h2 {
+    font-size: 2.4rem;
+    letter-spacing: -0.09rem;
+  }
+  h3,
+.button span {
+    font-size: 0.9rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.193rem;
+  }
+  h4 {
+    font-size: 0.8rem;
+    letter-spacing: 0.073rem;
+    line-height: 1.6rem;
+  }
+  .navbar h4 {
+    font-size: 1.1rem;
+    letter-spacing: 0.01rem;
+    line-height: 2.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+  main {
+    padding: 0 4rem;
+  }
+}
 .planets {
   display: flex;
   flex-direction: column;
@@ -134,10 +178,12 @@ p {
   position: relative;
 }
 .planets__top--image {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 23.2vw;
+  max-width: 29rem;
+  height: 23.2vw;
+  max-height: 29rem;
+  position: relative;
+  margin: auto;
 }
 .planets__top--info {
   max-width: 35rem;
@@ -217,6 +263,53 @@ p {
   background-color: transparent;
 }
 
+@media screen and (max-width: 768px) {
+  .planets__top {
+    flex-direction: column;
+  }
+  .planets__top--image {
+    width: 18.4rem;
+    height: 18.4rem;
+  }
+  .planets__top--info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    height: 25rem;
+  }
+  .planets__top--info-tablet {
+    width: 33.9rem;
+  }
+  .planets__top--info-text {
+    height: auto;
+    margin-top: 2.4rem;
+  }
+  .planets__top--info-text span, .planets__top--info-text span a {
+    font-size: 1.2rem;
+  }
+  .planets__bottom--rotation, .planets__bottom--revolution, .planets__bottom--radius, .planets__bottom--average {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1.5rem;
+    width: 17vw;
+    height: 8.8rem;
+    max-width: 16.4rem;
+  }
+  .geologyPosition {
+    position: absolute;
+    top: 65%;
+    left: 25%;
+    transform: translateX(-16%);
+    -webkit-transform: translateX(-16%);
+    -moz-transform: translateX(-16%);
+    -ms-transform: translateX(-16%);
+    -o-transform: translateX(-16%);
+  }
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -235,7 +328,7 @@ p {
 .navbar__links {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  width: 47.7vw;
   height: 100%;
 }
 .navbar__links a {
@@ -253,4 +346,22 @@ p {
   top: 0;
   width: 100%;
   border-top: 0.4rem solid #419ebb;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 15.9rem;
+  }
+  .navbar__title {
+    padding-top: 3.2rem;
+  }
+  .navbar__links {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar {
+    display: none;
+  }
 }

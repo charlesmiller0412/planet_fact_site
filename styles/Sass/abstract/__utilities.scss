@@ -5,6 +5,7 @@
     letter-spacing: 0.257rem;
     font-family: $font-spartan;
     font-weight: $spartan-bold;
+    margin-bottom: 1.6rem;
     display: flex;
     align-items: center;
     width: 35rem;
@@ -19,15 +20,15 @@
     -moz-transition: all 0.2s;
     -ms-transition: all 0.2s;
     -o-transition: all 0.2s;
+    & :last-of-type {
+        margin-bottom: 0;
+    }
     & span {
         color: $light-gray;
         font-size: 1.2rem;
         padding-inline: 2.8rem;
         letter-spacing: 0.257rem;
         line-height: 2.5rem;
-    }
-    & p {
-        font-size: 1.2rem;
     }
     &:hover {
         background-color: $dark-gray;
@@ -56,4 +57,15 @@
     left: 0;
     height: 8.5rem;
     background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .button {
+        width: 28rem;
+        height: 4rem;
+        &:hover {
+            background-color: $light-blue;
+            cursor: pointer;
+        }
+    }
 }

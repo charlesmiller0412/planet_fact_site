@@ -1,7 +1,7 @@
 import usePlanetStore from "../appStore";
-import * as data from "../public/assets/data.json";
 
 export default function Navbar() {
+    let data = require("../public/assets/data.json");
     const updatePlanet = usePlanetStore((state: any) => state.updatePlanet);
     const updateActive = usePlanetStore((state: any) => state.updateActive);
 

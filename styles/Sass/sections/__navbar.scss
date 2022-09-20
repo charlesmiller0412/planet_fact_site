@@ -15,7 +15,7 @@
     &__links {
         display: flex;
         justify-content: space-between;
-        width: 50%;
+        width: 47.7vw;
         height: 100%;
         & a {
             display: grid;
@@ -33,5 +33,23 @@
                 border-top: 0.4rem solid $light-blue;
             }
         }
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        height: 15.9rem;
+        &__title {
+            padding-top: 3.2rem;
+        }
+        &__links {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        display: none;
     }
 }

@@ -1,70 +1,67 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { Button } from "../../components/button";
-import image from "../../assets/images/planet-mercury.svg";
 import Image from "next/image";
-import * as data from "../../public/assets/data.json";
 import usePlanetStore from "../../appStore";
 import $ from "jquery";
 
 export default function Planets() {
+    let data = require("../../public/assets/data.json");
     const currentActive = usePlanetStore((state: any) => state.active);
     const currentPlanet = usePlanetStore((state: any) => state.planet);
     const updateActive = usePlanetStore((state: any) => state.updateActive);
 
-    console.log(currentPlanet);
-
     let activeImage: any;
     let imageSize: any;
 
-    if (currentPlanet == 0) {
-        imageSize = {
-            width: "29rem",
-            height: "29rem",
-            position: "relative",
-        };
-    } else if (currentPlanet == 1) {
-        imageSize = {
-            width: "40rem",
-            height: "40rem",
-            position: "relative",
-        };
-    } else if (currentPlanet == 2) {
-        imageSize = {
-            width: "45rem",
-            height: "45rem",
-            position: "relative",
-        };
-    } else if (currentPlanet == 3) {
-        imageSize = {
-            width: "33.6rem",
-            height: "33.6rem",
-            position: "relative",
-        };
-    } else if (currentPlanet == 4) {
-        imageSize = {
-            width: "58.2rem",
-            height: "58.2rem",
-            position: "relative",
-        };
-    } else if (currentPlanet == 5) {
-        imageSize = {
-            width: "61rem",
-            height: "61rem",
-            position: "relative",
-        };
-    } else if (currentPlanet == 6) {
-        imageSize = {
-            width: "45.8rem",
-            height: "45.8rem",
-            position: "relative",
-        };
-    } else if (currentPlanet == 7) {
-        imageSize = {
-            width: "45rem",
-            height: "45rem",
-            position: "relative",
-        };
-    }
+    // if (currentPlanet == 0) {
+    //     imageSize = {
+    //         width: "29rem",
+    //         height: "29rem",
+    //         position: "relative",
+    //     };
+    // } else if (currentPlanet == 1) {
+    //     imageSize = {
+    //         width: "40rem",
+    //         height: "40rem",
+    //         position: "relative",
+    //     };
+    // } else if (currentPlanet == 2) {
+    //     imageSize = {
+    //         width: "45rem",
+    //         height: "45rem",
+    //         position: "relative",
+    //     };
+    // } else if (currentPlanet == 3) {
+    //     imageSize = {
+    //         width: "33.6rem",
+    //         height: "33.6rem",
+    //         position: "relative",
+    //     };
+    // } else if (currentPlanet == 4) {
+    //     imageSize = {
+    //         width: "58.2rem",
+    //         height: "58.2rem",
+    //         position: "relative",
+    //     };
+    // } else if (currentPlanet == 5) {
+    //     imageSize = {
+    //         width: "61rem",
+    //         height: "61rem",
+    //         position: "relative",
+    //     };
+    // } else if (currentPlanet == 6) {
+    //     imageSize = {
+    //         width: "45.8rem",
+    //         height: "45.8rem",
+    //         position: "relative",
+    //     };
+    // } else if (currentPlanet == 7) {
+    //     imageSize = {
+    //         width: "45rem",
+    //         height: "45rem",
+    //         position: "relative",
+    //     };
+    // }
 
     if (currentActive === "overview") {
         activeImage = (
@@ -140,25 +137,29 @@ export default function Planets() {
             <div className="planets__top">
                 <div className="planets__top--image">{activeImage}</div>
                 <div className="planets__top--info">
-                    <div className="planets__top--info-title">
-                        <h1>{data[currentPlanet].name}</h1>
-                    </div>
-                    <div className="planets__top--info-text">
-                        <p>{data[currentPlanet].overview.content}</p>
-                        <span>
-                            Source : &nbsp;
-                            <a href="#">
-                                Wikipedia
-                                <div className="arrow">
-                                    <Image
-                                        src={"/assets/images/icon-source.svg"}
-                                        alt="arrow"
-                                        width={12}
-                                        height={12}
-                                    />
-                                </div>
-                            </a>
-                        </span>
+                    <div className="planets__top--info-tablet">
+                        <div className="planets__top--info-title">
+                            <h1>{data[currentPlanet].name}</h1>
+                        </div>
+                        <div className="planets__top--info-text">
+                            <p>{data[currentPlanet].overview.content}</p>
+                            <span>
+                                Source : &nbsp;
+                                <a href="#">
+                                    Wikipedia
+                                    <div className="arrow">
+                                        <Image
+                                            src={
+                                                "/assets/images/icon-source.svg"
+                                            }
+                                            alt="arrow"
+                                            width={12}
+                                            height={12}
+                                        />
+                                    </div>
+                                </a>
+                            </span>
+                        </div>
                     </div>
                     <div className="planets__top--info-buttons">
                         <div

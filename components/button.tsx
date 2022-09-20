@@ -9,7 +9,7 @@ export const Button: React.FC<Props> = ({ number, title, onClick }) => {
     return (
         <button className="button" onClick={onClick}>
             <span className="buttonNumber">{number}</span>
-            <p>{title}</p>
+            <h3>{title}</h3>
         </button>
     );
 };
