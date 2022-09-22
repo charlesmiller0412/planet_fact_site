@@ -59,12 +59,30 @@
 
 @media screen and (max-width: 768px) {
   .button {
-    width: 28rem;
+    width: 35vw;
+    max-width: 28rem;
     height: 4rem;
   }
   .button:hover {
     background-color: #419ebb;
     cursor: pointer;
+  }
+}
+@media screen and (max-width: 576px) {
+  .button {
+    width: auto;
+    height: 100%;
+    border: none;
+    margin: auto;
+    text-align: center;
+    padding: 2rem 0;
+    background-color: transparent;
+  }
+  .button:hover {
+    background-color: transparent;
+  }
+  .button h3 {
+    width: 100%;
   }
 }
 * {
@@ -160,6 +178,41 @@ p {
     padding: 0 4rem;
   }
 }
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+  h2 {
+    font-size: 2rem;
+    letter-spacing: -0.075rem;
+    line-height: 2rem;
+  }
+  h3,
+.button span {
+    font-size: 0.9rem;
+    line-height: auto;
+    letter-spacing: 0.193rem;
+  }
+  h4 {
+    font-size: 0.8rem;
+    letter-spacing: 0.073rem;
+    line-height: 1.6rem;
+  }
+  .navbar h4 {
+    font-size: 1.1rem;
+    letter-spacing: 0.01rem;
+    line-height: 2.5rem;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 2.2rem;
+  }
+  main {
+    height: auto;
+    padding: 0;
+  }
+}
 .planets {
   display: flex;
   flex-direction: column;
@@ -178,12 +231,10 @@ p {
   position: relative;
 }
 .planets__top--image {
-  width: 23.2vw;
-  max-width: 29rem;
-  height: 23.2vw;
-  max-height: 29rem;
+  display: flex;
+  justify-content: center;
   position: relative;
-  margin: auto;
+  width: 60%;
 }
 .planets__top--info {
   max-width: 35rem;
@@ -243,7 +294,7 @@ p {
 .geologyPosition {
   position: absolute;
   top: 65%;
-  left: 25%;
+  left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -264,27 +315,37 @@ p {
 }
 
 @media screen and (max-width: 768px) {
+  .planets {
+    overflow: hidden;
+  }
   .planets__top {
     flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
   }
   .planets__top--image {
-    width: 18.4rem;
-    height: 18.4rem;
+    height: 100%;
+    display: grid;
+    place-content: center;
   }
   .planets__top--info {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     max-width: 100%;
     width: 100%;
     height: 25rem;
   }
   .planets__top--info-tablet {
-    width: 33.9rem;
+    width: 47vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
   }
   .planets__top--info-text {
     height: auto;
-    margin-top: 2.4rem;
+    margin-top: 0;
   }
   .planets__top--info-text span, .planets__top--info-text span a {
     font-size: 1.2rem;
@@ -295,19 +356,82 @@ p {
     align-items: flex-start;
     justify-content: center;
     padding: 1.5rem;
-    width: 17vw;
+    width: 21vw;
     height: 8.8rem;
     max-width: 16.4rem;
   }
-  .geologyPosition {
+}
+@media screen and (max-width: 576px) {
+  .planets {
+    padding-top: 6rem;
+    padding-bottom: 4.7rem;
+  }
+  .planets__top {
+    text-align: center;
+    height: 94vh;
+    justify-content: space-evenly;
+  }
+  .planets__top--image {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+  }
+  .planets__top--info {
+    flex-direction: column;
+    height: auto;
+    padding: 0 2.4rem;
+  }
+  .planets__top--info-tablet {
+    width: 100%;
+    max-width: 32.7rem;
+    display: block;
+    margin: auto;
+  }
+  .planets__top--info-title {
+    margin-bottom: 1.6rem;
+  }
+  .planets__top--info-buttons {
     position: absolute;
-    top: 65%;
-    left: 25%;
-    transform: translateX(-16%);
-    -webkit-transform: translateX(-16%);
-    -moz-transform: translateX(-16%);
-    -ms-transform: translateX(-16%);
-    -o-transform: translateX(-16%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #38384f;
+    border-left: none;
+    border-right: none;
+  }
+  .planets__top--info-buttons span {
+    display: none;
+  }
+  .planets__bottom {
+    flex-direction: column;
+    padding: 0 2.4rem;
+    justify-content: flex-start;
+  }
+  .planets__bottom--rotation, .planets__bottom--revolution, .planets__bottom--radius, .planets__bottom--average {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    height: 5rem;
+    margin-bottom: 0.8rem;
+  }
+  .active {
+    background-color: #419ebb;
+  }
+  .active h3 {
+    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
+  }
+  .geologyPosition {
+    top: 60%;
   }
 }
 .navbar {
@@ -348,6 +472,10 @@ p {
   border-top: 0.4rem solid #419ebb;
 }
 
+.mobileNav {
+  display: none;
+}
+
 @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
@@ -360,8 +488,90 @@ p {
     width: 100%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 576px) {
   .navbar {
     display: none;
+  }
+  .mobileNav {
+    background-color: #070724;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 2.4rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .mobileNav__title {
+    font-family: "Antonio", sans-serif;
+    font-weight: 500;
+    font-size: 2.8rem;
+    letter-spacing: -0.105px;
+    text-transform: uppercase;
+    color: #ffffff;
+    line-height: 2.8rem;
+  }
+  .mobileNav__menuBtn {
+    height: 1.7rem;
+    width: 2.4rem;
+  }
+  .mobileMenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100vw;
+    margin-top: 6rem;
+    height: calc(100vh - 6rem);
+    z-index: 1;
+    background-color: #070724;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    padding: 0 2.4rem;
+  }
+  .mobileMenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+  .mobileMenu ul li {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-family: "League Spartan", sans-serif;
+    font-weight: 700;
+    line-height: 2.5rem;
+    letter-spacing: 0.136rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-bottom: 1px solid #38384f;
+    padding: 2rem 0;
+  }
+  .mobileMenu ul li:last-of-type {
+    border-bottom: none;
+  }
+  .mobileMenu__color {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 2.5rem;
+  }
+  .showMenu {
+    left: 0;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
   }
 }

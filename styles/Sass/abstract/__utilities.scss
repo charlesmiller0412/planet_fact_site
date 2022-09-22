@@ -61,11 +61,30 @@
 
 @media screen and (max-width: 768px) {
     .button {
-        width: 28rem;
+        width: 35vw;
+        max-width: 28rem;
         height: 4rem;
         &:hover {
             background-color: $light-blue;
             cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .button {
+        width: auto;
+        height: 100%;
+        border: none;
+        margin: auto;
+        text-align: center;
+        padding: 2rem 0;
+        background-color: transparent;
+        &:hover {
+            background-color: transparent;
+        }
+        & h3 {
+            width: 100%;
         }
     }
 }

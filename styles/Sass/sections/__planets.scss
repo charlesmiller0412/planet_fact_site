@@ -14,12 +14,10 @@
         height: 70%;
         position: relative;
         &--image {
-            width: 23.2vw;
-            max-width: 29rem;
-            height: 23.2vw;
-            max-height: 29rem;
+            display: flex;
+            justify-content: center;
             position: relative;
-            margin: auto;
+            width: 60%;
         }
         &--info {
             max-width: 35rem;
@@ -88,7 +86,7 @@
 .geologyPosition {
     position: absolute;
     top: 65%;
-    left: 25%;
+    left: 50%;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
@@ -110,31 +108,37 @@
 
 @media screen and (max-width: 768px) {
     .planets {
+        overflow: hidden;
         &__top {
             flex-direction: column;
+            justify-content: space-between;
+            height: 80%;
             &--image {
-                width: 18.4rem;
-                height: 18.4rem;
+                height: 100%;
+                display: grid;
+                place-content: center;
             }
             &--info {
                 display: flex;
                 justify-content: space-between;
-                align-items: center;
+                align-items: flex-end;
                 max-width: 100%;
                 width: 100%;
                 height: 25rem;
                 &-tablet {
-                    width: 33.9rem;
+                    width: 47vw;
+                    height: 30vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
                 }
                 &-text {
                     height: auto;
-                    margin-top: 2.4rem;
+                    margin-top: 0;
                     & span,
                     & span a {
                         font-size: 1.2rem;
                     }
-                }
-                &-buttons {
                 }
             }
         }
@@ -148,20 +152,89 @@
                 align-items: flex-start;
                 justify-content: center;
                 padding: 1.5rem;
-                width: 17vw;
+                width: 21vw;
                 height: 8.8rem;
                 max-width: 16.4rem;
             }
         }
     }
+}
+
+@media screen and (max-width: 576px) {
+    .planets {
+        padding-top: 6rem;
+        padding-bottom: 4.7rem;
+        &__top {
+            text-align: center;
+            height: 94vh;
+            justify-content: space-evenly;
+            &--image {
+                margin-top: 20%;
+                display: flex;
+                align-items: center;
+                height: 40%;
+                width: 100%;
+            }
+            &--info {
+                flex-direction: column;
+                height: auto;
+                padding: 0 2.4rem;
+                &-tablet {
+                    width: 100%;
+                    max-width: 32.7rem;
+                    display: block;
+                    margin: auto;
+                }
+                &-title {
+                    margin-bottom: 1.6rem;
+                }
+
+                &-buttons {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    border: 1px solid $dark-gray;
+                    border-left: none;
+                    border-right: none;
+                    & span {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &__bottom {
+            flex-direction: column;
+            padding: 0 2.4rem;
+            // height: 32.7rem;
+            justify-content: flex-start;
+            &--rotation,
+            &--revolution,
+            &--radius,
+            &--average {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                max-width: 100%;
+                width: 100%;
+                height: 5rem;
+                margin-bottom: 0.8rem;
+            }
+        }
+    }
+    .active {
+        background-color: $light-blue;
+        & h3 {
+            transform: translateY(2px);
+            -webkit-transform: translateY(2px);
+            -moz-transform: translateY(2px);
+            -ms-transform: translateY(2px);
+            -o-transform: translateY(2px);
+        }
+    }
     .geologyPosition {
-        position: absolute;
-        top: 65%;
-        left: 25%;
-        transform: translateX(-16%);
-        -webkit-transform: translateX(-16%);
-        -moz-transform: translateX(-16%);
-        -ms-transform: translateX(-16%);
-        -o-transform: translateX(-16%);
+        top: 60%;
     }
 }

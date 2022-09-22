@@ -4,6 +4,7 @@ import Image from "next/image";
 import starBG from "../public/assets/images/background-stars.svg";
 import Navbar from "../components/navbar";
 import dynamic from "next/dynamic";
+import MobileNav from "../components/MobileNav";
 const DynamicHeader = dynamic(() => import("./sections/Planets"), {
     ssr: false,
 });
@@ -35,15 +36,18 @@ const Home: NextPage = () => {
             </Head>
             <header>
                 <Navbar />
+                <MobileNav />
             </header>
             <main
                 style={{
                     backgroundImage: `url(${starBG.src})`,
-                    width: "100vw",
-                    height: "100vh",
+                    width: "100%",
+                    height: "100%",
+                    minHeight: "100vh",
                     backgroundPosition: "center",
                     backgroundRepeat: "none",
                     backgroundSize: "cover",
+                    overflowX: "hidden",
                 }}
             >
                 <DynamicHeader />
