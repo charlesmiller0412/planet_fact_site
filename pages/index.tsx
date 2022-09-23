@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import starBG from "../public/assets/images/background-stars.svg";
 import Navbar from "../components/navbar";
 import dynamic from "next/dynamic";
