@@ -4,9 +4,7 @@ import starBG from "../public/assets/images/background-stars.svg";
 import Navbar from "../components/navbar";
 import dynamic from "next/dynamic";
 import MobileNav from "../components/MobileNav";
-const DynamicHeader = dynamic(() => import("./sections/Planets"), {
-    ssr: false,
-});
+import Planets from "./Planets";
 
 const Home: NextPage = () => {
     return (
@@ -49,7 +47,7 @@ const Home: NextPage = () => {
                     overflowX: "hidden",
                 }}
             >
-                <DynamicHeader />
+                <Planets />
             </main>
 
             <footer></footer>
