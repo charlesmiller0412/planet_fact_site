@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Project%20Display%20Images/easybankScreenshot.png)
+![](./Project%20Display%20Images/planetDesktopScreenshot.png)
 
 ### Links
 
