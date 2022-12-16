@@ -18,12 +18,12 @@ const Home: NextPage = () => {
                 <meta name="author" content="Charles Miller" />
                 <meta
                     name="description"
-                    content="Charles Miller | Planet Fact Site"
+                    content="Planet Fact Site challenge from frontendmentor.com"
                 />
                 <meta property="og:image" content="/assets/favicon/logo.png" />
                 <meta
                     property="og:description"
-                    content="Digital Portfolio for Charles Miller - Web Developer, UX/UI Designer, Graphic Designer"
+                    content="Planet Fact Site challenge from frontendmentor.com"
                 />
                 <meta
                     property="og:title"
@@ -49,8 +49,6 @@ const Home: NextPage = () => {
             >
                 <Planets />
             </main>
-
-            <footer></footer>
         </div>
     );
 };
